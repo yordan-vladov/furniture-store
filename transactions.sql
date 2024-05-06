@@ -4,7 +4,6 @@ INSERT INTO customers (name, email, phone) VALUES ('Alice', 'alice@example.com',
 
 SET @customer_id = LAST_INSERT_ID();
 
-
 INSERT INTO orders (customer_id, order_date, total_amount) VALUES (@customer_id, CURDATE(), 100.00);
 
 SELECT LAST_INSERT_ID() INTO @order_id;
