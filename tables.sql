@@ -60,16 +60,6 @@ order_count INT,
 avg_order DECIMAL(10,2)
 );
 
-CREATE TABLE archived_customers (
-    archived_customer_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_id INT,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    phone VARCHAR(20),
-    archiving_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-
 -- Inserting data into customers table
 INSERT INTO customers (name, email, phone) VALUES
 ('John Doe', 'john@example.com', '123-456-7890'),
